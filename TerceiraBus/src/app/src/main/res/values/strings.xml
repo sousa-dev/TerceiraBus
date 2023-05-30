@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Terceira Bus</string>
+    <!-- Test Banner Ads ad unit id
+    <string name="ad_unit_home" translatable="false">ca-app-pub-8246676797736648/8052412190</string> -->
+    <string name="ad_unit_open" translatable="false">ca-app-pub-8246676797736648/6604325812</string>
+
+    <string name="ad_unit_settings" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ad_unit_home" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="find_button">Find</string>
+    <string name="find_hint_message">Find out which bus stops at a bus stop</string>
+    <string name="stop">Bus Stop</string>
+    <string name="no_fav_message">There are no favorite routes :(</string>
+    <string name="no_routes_search">There were no Routes found :(</string>
+    <string name="add_fav_toast_message">Route Added to Favorites!</string>
+    <string name="remove_fav_toast_message">Route Removed from Favorites!</string>
+    <string name="search_home_button">Search</string>
+    <string name="fav_routes_text">Favorite Routes</string>
+    <string name="origin_home_hint">Origin</string>
+    <string name="destination_home_hint">Destination</string>
+    <string name="sunday">Sundays</string>
+    <string name="sunday_only">Sundays</string>
+    <string name="weekdays">Weekdays</string>
+    <string name="saturday">Saturdays</string>
+    <string name="lang_hint">Language</string>
+    <string name="support_creator">Support The Creator</string>
+    <string name="rate_app">Rate the App</string>
+    <string name="warning_message">The information provided in this application was given by the bus companies and is theirs responsibility.</string>
+    <string name="no_routes_found">There are no direct routes between this two bus stops :(</string>
+    <string name="home_nb" translatable="false">HOME</string>
+    <string name="find_nb">FIND</string>
+    <string name="map_nb">MAP</string>
+    <string name="settings_nb" translatable="false">INFO</string>
+    <string name="toast_search_message">Please fill all fields.</string>
+    <string name="toast_link_message">Opening external link...</string>
+    <string name="report_a_problem">Report a Problem</string>
+    <string name="if_you_find_any_problem_or_wrong_times_on_the_app_please_report_it">If you find any problem or wrong times on the app please report it</string>
+    <string name="route_dialog_title">"ERROR on Route "</string>
+    <string name="route_dialog_message">Oops... There seems to be a problem loading this routes info. Please report it so I can fix it!</string>
+    <string name="route_dialog_positive">Report</string>
+    <string name="route_dialog_negative">No</string>
+    <string name="something_wrong"><u>Something wrong?</u></string>
+    <string name="page_dialog_title">Something wrong with Route </string>
+    <string name="page_dialog_message">Please report it!</string>
+    <string name="info">Where do you wanna go?</string>
+    <string name="map_warning">Once it launches change it to bus mode!</string>
+    <string name="map_dest_blank">Destination cannot be blank</string>
+
+</resources>

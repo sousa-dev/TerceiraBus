@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Terceira Bus</string>
+    <string name="find_button">Trouve</string>
+    <string name="find_hint_message">Découvrez quels itinéraires passent à un arrêt de bus</string>
+    <string name="stop">Arrêt de Bus</string>
+    <string name="no_fav_message">Il n\'y a pas d\'itinéraires favoris :(</string>
+    <string name="no_routes_search">Aucun itinéraire n\'a été trouvé :(</string>
+    <string name="add_fav_toast_message">Itinéraire ajouté aux favoris !</string>
+    <string name="remove_fav_toast_message">Itinéraire supprimé des favoris !</string>
+    <string name="search_home_button">Chercher</string>
+    <string name="fav_routes_text">Itinéraires favoris</string>
+    <string name="origin_home_hint">Origine</string>
+    <string name="destination_home_hint">Destin</string>
+    <string name="sunday">Dimanches</string>
+    <string name="sunday_only">Les Dimanches</string>
+    <string name="weekdays">Jours de semaine</string>
+    <string name="saturday">Les Samedis</string>
+    <string name="lang_hint">Langue</string>
+    <string name="support_creator">Soutenez le créateur</string>
+    <string name="rate_app">Évaluer l\'application</string>
+    <string name="warning_message">Les informations fournies dans cette application ont été fournies par les compagnies de bus et relèvent de leur responsabilité.</string>
+    <string name="no_routes_found">Il n\'y a pas de lignes directes entre ces deux arrêts de bus :(</string>
+    <string name="find_nb">TROUVE</string>
+    <string name="map_nb">CARTE</string>
+    <string name="toast_search_message">Merci de compléter tous les champs.</string>
+    <string name="toast_link_message">Ouverture du lien externe...</string>
+    <string name="report_a_problem">Signaler un Problème</string>
+    <string name="if_you_find_any_problem_or_wrong_times_on_the_app_please_report_it">Si vous rencontrez un problème ou des heures incorrectes sur l\'application, veuillez le signaler</string>
+    <string name="route_dialog_title">"ERREUR sur l'itinéraire "</string>
+    <string name="route_dialog_message">Oops... Il semble y avoir un problème lors du chargement de ces informations sur les routes. Merci de le signaler pour que je puisse le réparer !</string>
+    <string name="route_dialog_positive">Signalez-le</string>
+    <string name="route_dialog_negative">Non</string>
+    <string name="something_wrong"><u>Y a-t-il un problème?</u></string>
+    <string name="page_dialog_title">"Problèmes avec l'itinéraire "</string>
+    <string name="page_dialog_message">S\'il vous plaît, signalez-le!</string>
+    <string name="info">Où voulez-vous aller?</string>
+    <string name="map_warning">Une fois qu\'il est lancé, passez-le en mode bus !</string>
+    <string name="map_dest_blank">La destination ne peut pas être vide</string>
+</resources>
