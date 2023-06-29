@@ -30,10 +30,14 @@ for type_of_day in ['weekdays', 'sabado', 'domingo']:
       #Get all indexes of 'idContentorRetorno: idPercursoGrafico'
       indexes = [i for i, x in enumerate(options) if x == 'idContentorRetorno: idPercursoGrafico']
     
-      for i in range(1,len(indexes)):
+      for i in range(1,len(indexes)+1):
           #TODO: Check if last value from the list is being used
           print(f'{i}/{len(indexes)} - ' + type_of_day)
-          option = options[indexes[i-1]:indexes[i]]
+          option = []
+          if i == len(indexes):
+             option = options[indexes[i-1]:]
+          else:
+             option = options[indexes[i-1]:indexes[i]]
           option = [x.split(': ')[1] for x in option]
           data = {
               'idContentorRetorno': option[0],
@@ -60,6 +64,7 @@ for type_of_day in ['weekdays', 'sabado', 'domingo']:
                   f.write(f'{paragem_tempo[0]}:{paragem_tempo[1]};')
               f.write('\n')
           time.sleep(random.choice(SLEEP_TIME))
+
   print(type_of_day+" DONE")
   print(paragens_tempos)
 
