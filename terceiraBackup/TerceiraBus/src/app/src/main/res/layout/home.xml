@@ -23,6 +23,7 @@
         android:layout_height="42dp"
         android:layout_marginTop="32dp"
         android:hint="@string/destination_home_hint"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -42,7 +43,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/divider"
         app:layout_constraintTop_toBottomOf="@+id/divider"
-        tools:visibility="gone" />
+        tools:visibility="visible" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -59,7 +60,6 @@
         android:id="@+id/homeSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:bottomLeftRadius="20dp"
@@ -70,23 +70,8 @@
         app:backgroundTint="#981CC3"
         app:layout_constraintEnd_toEndOf="@+id/find_routes_map"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/find_routes_map"
-        app:layout_constraintTop_toBottomOf="@+id/find_routes_map" />
-
-    <View
-        android:id="@+id/divider"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homeSearch" />
+        app:layout_constraintStart_toStartOf="@+id/actv2"
+        app:layout_constraintTop_toBottomOf="@+id/actv2" />
 
     <TextView
         android:id="@+id/home_favouriteLabel1"
@@ -98,11 +83,26 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="@+id/divider"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.022"
         app:layout_constraintStart_toStartOf="@+id/divider"
         app:layout_constraintTop_toBottomOf="@+id/homeSearch"
-        app:layout_constraintVertical_bias="0.727"
-        tools:visibility="gone" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeSearch" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/home_recyclerview"
@@ -113,7 +113,7 @@
         app:layout_constraintEnd_toEndOf="@+id/divider"
         app:layout_constraintStart_toStartOf="@+id/divider"
         app:layout_constraintTop_toTopOf="@+id/divider"
-        tools:visibility="gone" />
+        tools:visibility="visible" />
 
     <ImageButton
         android:id="@+id/swapStops"
@@ -128,7 +128,7 @@
         app:layout_constraintStart_toStartOf="@+id/from_home"
         app:layout_constraintTop_toBottomOf="@+id/from_home"
         app:layout_constraintVertical_bias="0.0"
-        tools:visibility="gone" />
+        tools:visibility="visible" />
 
     <AutoCompleteTextView
         android:id="@+id/from_home"
@@ -139,7 +139,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:visibility="gone" />
+        tools:visibility="visible" />
 
     <ImageView
         android:id="@+id/actv1"
@@ -152,7 +152,7 @@
         app:layout_constraintHorizontal_bias="0.68"
         app:layout_constraintStart_toStartOf="@+id/from_home"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:visibility="gone" />
+        tools:visibility="visible" />
 
     <AutoCompleteTextView
         android:id="@+id/to_home"
@@ -163,7 +163,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/from_home"
-        tools:visibility="gone" />
+        tools:visibility="visible" />
 
     <ImageView
         android:id="@+id/actv2"
@@ -176,7 +176,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/actv1"
         app:layout_constraintTop_toBottomOf="@+id/actv1"
-        tools:visibility="gone" />
+        tools:visibility="visible" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_template_find"
@@ -200,6 +200,7 @@
         android:text="@string/info"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -211,6 +212,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:src="@drawable/bus_mode_gif"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/divider"
         app:layout_constraintStart_toStartOf="@+id/divider"
         app:layout_constraintTop_toBottomOf="@+id/map_warning" />
@@ -223,6 +225,7 @@
         android:text="@string/map_warning"
         android:textSize="16sp"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/divider"
         app:layout_constraintStart_toStartOf="@+id/divider"
         app:layout_constraintTop_toTopOf="@+id/divider" />

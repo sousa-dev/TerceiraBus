@@ -7,10 +7,10 @@
         android:title="@string/home_nb" />
     <item
         android:id="@+id/search_nb"
-        android:enabled="false"
-        android:visible="false"
+        android:enabled="true"
         android:icon="@android:drawable/ic_menu_search"
-        android:title="@string/find_nb" />
+        android:title="@string/find_nb"
+        android:visible="true" />
     <item
         android:id="@+id/map_nb"
         android:enabled="false"

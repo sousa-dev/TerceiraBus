@@ -47,13 +47,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
         val search: Button = view.findViewById(R.id.homeSearch)
         val swapStops: ImageButton = view.findViewById(R.id.swapStops)
-        from.visibility = View.INVISIBLE
-        to.visibility = View.INVISIBLE
-        actv_from.visibility = View.INVISIBLE
-        actv_to.visibility = View.INVISIBLE
-        swapStops.visibility = View.INVISIBLE
         val fav: TextView = view.findViewById(R.id.home_favouriteLabel1)
-        fav.visibility = View.INVISIBLE
 
         val getDirections = view.findViewById<Button>(R.id.homeSearch)
         val destination = view.findViewById<TextInputEditText>(R.id.find_routes_map)
@@ -78,7 +72,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
         }
 
 
-        /**
+
         from.threshold = 2
         to.threshold = 2
 
@@ -112,8 +106,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
                 Toast.makeText(context, resources.getString(R.string.toast_search_message), Toast.LENGTH_SHORT).show()
         }
 
-        //TODO: improve favorite save system
-        saveFav()**/
+        saveFav()
     }
 
     private fun saveFav(){
