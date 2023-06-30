@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -11,8 +12,8 @@ android {
         applicationId "com.SousaDev.TerceiraBus"
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode 3
-        versionName '0.0.1'
+        versionCode 4
+        versionName '1.0.0'
 
         multiDexEnabled true
 
@@ -55,4 +56,5 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    implementation 'com.google.firebase:firebase-analytics:18.0.0'
 }

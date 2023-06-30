@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "482285396787",
+    "project_id": "terceira-bus",
+    "storage_bucket": "terceira-bus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482285396787:android:cf1b6e348cf30474125446",
+        "android_client_info": {
+          "package_name": "com.SousaDev.TerceiraBus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "482285396787-9memoppnjcd26b4336lcnn6qe5028fmj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5XHcmOZGUdpxNJsXJm3M27Ar1oFjV15g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "482285396787-9memoppnjcd26b4336lcnn6qe5028fmj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

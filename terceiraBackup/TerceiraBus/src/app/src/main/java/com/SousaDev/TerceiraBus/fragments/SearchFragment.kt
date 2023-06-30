@@ -137,17 +137,9 @@ class SearchFragment(private var origin: String? = null, private var destination
         val emptymsg = view?.findViewById<TextView>(R.id.emptymsg)
         emptymsg?.visibility = View.INVISIBLE
         var cards: MutableList<CardModel> = mutableListOf<CardModel>()
-        Log.d("createCards", times
-            .toString())
 
         if (times != null) {
             for(route in times!!) {
-                Log.d(
-                    "route.getStopTime",
-                    route.getStopTime(Datasource().getStop(origin), 0).toString()
-                )
-                Log.d("route.info", route.info.toString())
-
                 for (i in 0 until route.getNStops(route.getOrigin())!!)
                     route.getStopTime(Datasource().getStop(origin), i)?.let {
                         route.info?.let { it1 ->
