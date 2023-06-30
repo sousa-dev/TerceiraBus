@@ -16,6 +16,10 @@ import com.google.android.gms.ads.MobileAds
 import com.SousaDev.TerceiraBus.R
 import com.SousaDev.TerceiraBus.data.Datasource
 
+import android.text.Html
+import androidx.appcompat.app.AlertDialog
+
+
 
 class SettingsFragment: Fragment(), View.OnClickListener {
     override fun onCreateView(
@@ -28,19 +32,70 @@ class SettingsFragment: Fragment(), View.OnClickListener {
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        MobileAds.initialize(this.context) {}
 
-        val mAdView = view.findViewById<AdView>(R.id.settingsAd)
-        val adRequest = AdRequest.Builder().build()
-        mAdView.loadAd(adRequest)
+        val not_developed: Button = view.findViewById(R.id.button_not_developed)
+        val rate: Button = view.findViewById(R.id.button_rate_app)
+        val patreon: Button = view.findViewById(R.id.button_support_creator)
+        val mail: TextView = view.findViewById(R.id.report_mail)
+        val bus_contacts: Button = view.findViewById(R.id.button_bus_contact)
+        val faqs: Button = view.findViewById(R.id.button_faq)
+        val sousadev_logo: ImageView = view.findViewById(R.id.sousadev_logo)
 
-        val language: AutoCompleteTextView = view.findViewById(R.id.language)
-        val actv_language: ImageView = view.findViewById(R.id.actv_language)
+        sousadev_logo.setOnClickListener {
+            Toast.makeText(context, resources.getString(R.string.toast_link_message), Toast.LENGTH_SHORT).show()
 
-        val rate: Button = view.findViewById(R.id.rate)
-        val patreon: Button = view.findViewById(R.id.patreon)
-        val paypal: Button = view.findViewById(R.id.paypal)
-        val mail: Button = view.findViewById(R.id.mail)
+            try {
+                startActivity(
+                    Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("https://linktr.ee/sousadev_")
+                    )
+                )
+            } catch (anfe: ActivityNotFoundException) {
+                startActivity(
+                    Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("https://linktr.ee/sousadev_")
+                    )
+                )
+            }
+        }
+
+        faqs.setOnClickListener {
+            val builder = context?.let { AlertDialog.Builder(it) }
+            builder?.setTitle(getString(R.string.faq_label))
+            builder?.setMessage(getString(R.string.faq1_question) + "\n\t\t" + getString(R.string.faq1_answer)
+                    + "\n\n" + getString(R.string.faq2_question) + "\n\t\t" + getString(R.string.faq2_answer))
+            builder?.setPositiveButton(android.R.string.yes) { dialog, which ->
+            }
+
+            builder?.show()
+        }
+
+        bus_contacts.setOnClickListener {
+            val builder = context?.let { AlertDialog.Builder(it) }
+            builder?.setTitle(getString(R.string.company_contacts_label))
+            builder?.setMessage(
+                "" + Html.fromHtml("<b>Empresa de Viação Terceirense</b>") + "\n\t\t+351 295 217 001\n\t\t" +
+                        Html.fromHtml("<a href='https://www.evt.pt/'>evt.pt</a>")
+            )
+
+            builder?.setPositiveButton(android.R.string.yes) { dialog, which ->
+            }
+
+            builder?.show()
+        }
+
+        not_developed.setOnClickListener {
+            val builder = context?.let { AlertDialog.Builder(it) }
+            builder?.setTitle(getString(R.string.warning_dialog_title))
+            builder?.setMessage(getString(R.string.warning_dialog_message))
+
+            builder?.setPositiveButton(android.R.string.yes) { dialog, which ->
+            }
+
+            builder?.show()
+        }
 
         rate.setOnClickListener {
             Toast.makeText(context, resources.getString(R.string.toast_link_message), Toast.LENGTH_SHORT).show()
@@ -71,34 +126,14 @@ class SettingsFragment: Fragment(), View.OnClickListener {
                 startActivity(
                     Intent(
                         Intent.ACTION_VIEW,
-                        Uri.parse("https://www.patreon.com/sousadev")
+                        Uri.parse("https://linktr.ee/sousadev_")
                     )
                 )
             } catch (anfe: ActivityNotFoundException) {
                 startActivity(
                     Intent(
                         Intent.ACTION_VIEW,
-                        Uri.parse("https://www.patreon.com/sousadev")
-                    )
-                )
-            }
-        }
-
-        paypal.setOnClickListener {
-            Toast.makeText(context, resources.getString(R.string.toast_link_message), Toast.LENGTH_SHORT).show()
-
-            try {
-                startActivity(
-                    Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse("https://paypal.me/Wiky")
-                    )
-                )
-            } catch (anfe: ActivityNotFoundException) {
-                startActivity(
-                    Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse("https://paypal.me/Wiky")
+                        Uri.parse("https://linktr.ee/sousadev_")
                     )
                 )
             }
@@ -110,33 +145,8 @@ class SettingsFragment: Fragment(), View.OnClickListener {
                     "mailto", "sousadev@yahoo.com", null
                 )
             )
-            intent.putExtra(Intent.EXTRA_SUBJECT, "Terceira Bus: [Problem]")
+            intent.putExtra(Intent.EXTRA_SUBJECT, "São Miguel Bus: [Problem]")
             startActivity(Intent.createChooser(intent, "Choose an Email client:"))
-        }
-
-
-        language.setText(Datasource().getCurrentLang())
-
-        language.threshold = 2
-
-        val adapter: ArrayAdapter<String> = ArrayAdapter(view.context, android.R.layout.simple_dropdown_item_1line, arrayListOf("Português", "English", "Deutsch"))
-        language.setAdapter(adapter)
-
-        actv_language.setOnClickListener {
-            language.showDropDown()
-        }
-        language.setOnClickListener {
-            language.showDropDown()
-        }
-
-        language.setOnItemClickListener { _, _, position, _ ->
-            val pref = requireActivity().getPreferences(Context.MODE_PRIVATE)
-            val editor = pref.edit()
-            var str = ""
-
-            Datasource().changeCurrentLang(str)
-            editor.putString("lang", str)
-            editor.commit()
         }
     }
 

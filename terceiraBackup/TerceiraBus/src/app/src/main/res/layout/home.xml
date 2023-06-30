@@ -21,13 +21,12 @@
         android:id="@+id/find_routes_map"
         android:layout_width="0dp"
         android:layout_height="42dp"
-        android:layout_marginTop="32dp"
         android:hint="@string/destination_home_hint"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        tools:layout_editor_absoluteY="172dp" />
 
     <TextView
         android:id="@+id/home_emptymsg"
@@ -191,20 +190,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="@string/info"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageView"
