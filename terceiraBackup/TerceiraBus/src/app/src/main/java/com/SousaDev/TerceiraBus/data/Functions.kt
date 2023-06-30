@@ -9,9 +9,13 @@ class Functions {
         val ret: MutableList<Route> = mutableListOf()
         val originStop: Stop = Datasource().getStop(origin)
         val destinationStop: Stop = Datasource().getStop(destination)
-        for (route in Datasource().getAllRoutes())
+        for (route in Datasource().getAllRoutes()){
+            //Log.d("getOptions", route.stops.toString())
+            //Log.d("if", "origin -> " + route.stops.containsKey(originStop).toString() + " destination -> " + route.stops.containsKey(destinationStop).toString() + " origin < destination -> " + (route.getStopIdx(originStop) < route.getStopIdx(destinationStop)).toString() + " day -> " + (route.day == TypeOfDay).toString())
             if(route.stops.containsKey(originStop) and route.stops.containsKey(destinationStop) and (route.getStopIdx(originStop) < route.getStopIdx(destinationStop)) and (route.day == TypeOfDay))
                 ret.add(route)
+        }
+        Log.d("getOptions", ret.toString())
         return ret as ArrayList<Route>
     }
 

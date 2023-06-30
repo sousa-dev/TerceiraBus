@@ -137,18 +137,27 @@ class SearchFragment(private var origin: String? = null, private var destination
         val emptymsg = view?.findViewById<TextView>(R.id.emptymsg)
         emptymsg?.visibility = View.INVISIBLE
         var cards: MutableList<CardModel> = mutableListOf<CardModel>()
+        Log.d("createCards", times
+            .toString())
 
         if (times != null) {
-            for(route in times!!)
+            for(route in times!!) {
+                Log.d(
+                    "route.getStopTime",
+                    route.getStopTime(Datasource().getStop(origin), 0).toString()
+                )
+                Log.d("route.info", route.info.toString())
+
                 for (i in 0 until route.getNStops(route.getOrigin())!!)
-                    if (route.getStopTime(Datasource().getStop(origin), i) != "---" && route.getStopTime(Datasource().getStop(destination), i) != "---")
-                        route.getStopTime(Datasource().getStop(origin), i)?.let {
-                            route.info?.let { it1 ->
-                                CardModel(route.id, origin, destination,
-                                    it, route.company, info = it1, unique_id = route.unique_id
-                                )
-                            }
-                        }?.let { cards.add(it) }
+                    route.getStopTime(Datasource().getStop(origin), i)?.let {
+                        route.info?.let { it1 ->
+                            CardModel(
+                                route.id, origin, destination,
+                                it, route.company, info = it1, unique_id = route.unique_id
+                            )
+                        }
+                    }?.let { cards.add(it) }
+            }
         }
 
         if(cards.size > 1) cards = cards.sortedWith(compareBy { it.time }).toList() as MutableList<CardModel>
