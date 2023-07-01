@@ -41,6 +41,8 @@ class RoutePageFragment(private val id: String? = null, private val origin: Stri
         dest.text = destination
         routeId.text = id
         routeId.tag = unique_id
+        //TODO: Change this when adding Route id
+        routeId.visibility = View.GONE
 
 
         if (op == 0){

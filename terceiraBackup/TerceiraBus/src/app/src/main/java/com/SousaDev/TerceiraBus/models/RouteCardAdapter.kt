@@ -81,6 +81,10 @@ class RouteCardAdapter(private val context: Context, private val RoutesArrayList
             click = itemView.findViewById(R.id.go_to_route_page)
             delete = itemView.findViewById(R.id.remove_fav_home)
 
+            //TODO: Change this when adding ID and img
+            company.visibility = View.GONE
+            id.visibility = View.GONE
+
         }
     }
 
