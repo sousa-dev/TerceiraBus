@@ -46,14 +46,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="88dp"
         android:layout_marginTop="34dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/adtemplate_home"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/adtemplate_home"
         app:layout_constraintTop_toBottomOf="@+id/adtemplate_home"
-        app:srcCompat="@drawable/bus" />
+        app:srcCompat="@drawable/baseline_directions_bus_24" />
 
     <Button
         android:id="@+id/homeSearch"
@@ -70,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="@+id/find_routes_map"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/actv2"
-        app:layout_constraintTop_toBottomOf="@+id/actv2" />
+        app:layout_constraintTop_toBottomOf="@+id/to_home" />
 
     <TextView
         android:id="@+id/home_favouriteLabel1"
@@ -123,8 +123,8 @@
         android:src="@mipmap/baseline_swap_vert_black_36"
         app:layout_constraintBottom_toBottomOf="@+id/to_home"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.821"
-        app:layout_constraintStart_toStartOf="@+id/from_home"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/from_home"
         app:layout_constraintTop_toBottomOf="@+id/from_home"
         app:layout_constraintVertical_bias="0.0"
         tools:visibility="visible" />
@@ -144,13 +144,13 @@
         android:id="@+id/actv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
         android:padding="5dp"
         android:src="@mipmap/baseline_arrow_drop_down_black_24"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintBottom_toBottomOf="@+id/from_home"
+        app:layout_constraintEnd_toEndOf="@+id/from_home"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/from_home"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/from_home"
         tools:visibility="visible" />
 
     <AutoCompleteTextView
@@ -168,13 +168,13 @@
         android:id="@+id/actv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
         android:padding="5dp"
         android:src="@mipmap/baseline_arrow_drop_down_black_24"
+        app:layout_constraintBottom_toBottomOf="@+id/to_home"
         app:layout_constraintEnd_toEndOf="@+id/actv1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/actv1"
-        app:layout_constraintTop_toBottomOf="@+id/actv1"
+        app:layout_constraintTop_toTopOf="@+id/to_home"
         tools:visibility="visible" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
