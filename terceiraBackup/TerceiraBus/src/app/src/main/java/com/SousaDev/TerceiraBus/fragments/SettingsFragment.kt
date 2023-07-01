@@ -145,7 +145,7 @@ class SettingsFragment: Fragment(), View.OnClickListener {
                     "mailto", "sousadev@yahoo.com", null
                 )
             )
-            intent.putExtra(Intent.EXTRA_SUBJECT, "São Miguel Bus: [Problem]")
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Terceira Bus: [Problem]")
             startActivity(Intent.createChooser(intent, "Choose an Email client:"))
         }
     }

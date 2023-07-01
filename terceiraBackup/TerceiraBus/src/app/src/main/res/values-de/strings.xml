@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">São Miguel Bus</string>
     <string name="find_button">Finden</string>
     <string name="stop">Bushaltestelle</string>
     <string name="no_fav_message">Es gibt keine Lieblingsrouten :(</string>

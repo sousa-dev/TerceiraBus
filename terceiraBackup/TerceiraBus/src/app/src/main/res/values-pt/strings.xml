@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">São Miguel Bus</string>
     <string name="find_button">Pesquisar</string>
     <string name="find_hint_message">Descubra quais rotas passam numa paragem</string>
     <string name="stop">Paragem</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">São Miguel Bus</string>
     <string name="find_button">Encontrar</string>
     <string name="find_hint_message">Descubra qué rutas pasan en una parada de autobús</string>
     <string name="stop">Parada de autobús</string>
