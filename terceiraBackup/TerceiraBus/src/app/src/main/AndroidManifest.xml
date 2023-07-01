@@ -12,7 +12,8 @@
         android:theme="@style/Theme.TerceiraBus">
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustNothing">
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
